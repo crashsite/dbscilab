@@ -27,7 +27,7 @@ func TestSomething(t *testing.T) {
 	// test stuff here...
 }
 
-func TestWelcome(t *testing.T) {
+func TestGreetings(t *testing.T) {
 	request, err := http.NewRequest("GET", widgetUrl, body)
 	res, err := http.DefaultClient.Do(request)
 	if err != nil {
@@ -41,7 +41,7 @@ func TestWelcome(t *testing.T) {
 		fmt.Println(err)
 		os.Exit(1)
 	}
-	if strings.TrimSpace(string(data)) != "Welcome!" {
-		t.Errorf("Welcome! expected |%s|", string(data))
+	if strings.TrimSpace(string(data)) != "Greetings!" {
+		t.Errorf("Greetings! expected |%s|", string(data))
 	}
 }
