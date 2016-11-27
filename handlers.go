@@ -9,7 +9,7 @@ import (
 )
 
 func index(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "Welcome!")
+	fmt.Fprintln(w, "Greetings!")
 }
 
 func widgetList(w http.ResponseWriter, r *http.Request) {
